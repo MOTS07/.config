@@ -5,7 +5,7 @@ import threading
 
 
 def esta_abierto_puerto(host: str, puerto: int):
-    """
+    """https://github.com/MOTS07/codigosperrones/blob/main/scannerport.py
     Determina si el puerto dado en el host dado está abierto o no
     """
     cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -62,6 +62,7 @@ def regresar_puertos_abiertos_hilos(host: str, inicio_puerto=0, final_puerto=655
 
         
 if __name__ == '__main__':
-    host = sys.argv[1]
+    host = sys.argv[1] #Recupera el host que se ingrese al ejecutar el codigo
     puertos_abiertos = regresar_puertos_abiertos_hilos(host)
+    print ("Los puertos abiertos de "+host+" son :")
     print(puertos_abiertos)
