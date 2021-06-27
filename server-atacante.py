@@ -42,7 +42,7 @@ def leer_comandos(socket):
 
 def inicializar_servidor(puerto):
     servidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    servidor.bind(('148.226.80.161', int(puerto)))
+    servidor.bind(('', int(puerto)))
     servidor.listen(5)
     while True:
         cliente, addr = servidor.accept()
