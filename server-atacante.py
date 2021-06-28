@@ -42,7 +42,7 @@ def leer_comandos(socket):
 
 def inicializar_servidor(puerto):
     servidor = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    servidor.bind(('pentestingfei2021.ddns.net', int(puerto)))
+    servidor.bind(('', int(puerto)))
     servidor.listen(5)
     while True:
         cliente, addr = servidor.accept()
